@@ -7,3 +7,9 @@ This is the result for part1. Visually not a piece of art but the core is about
 using recursion. This tree will be used in next parts as starting point.
 
 <img src="./img/tree_simple_part1.gif" width="150" />
+
+```
+npm install
+npm run dev
+go to localhost:8080
+```

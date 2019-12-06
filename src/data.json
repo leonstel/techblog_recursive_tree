@@ -1,0 +1,50 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "Education",
+      "children": [
+        {
+          "name":"School",
+          "children": [
+            {
+              "name":"Highschool"
+            },
+            {
+              "name":"Elementary"
+            }
+          ]
+        },
+        {
+          "name":"Libraries",
+          "children": [
+            {
+              "name":"Books",
+              "children": [
+                {
+                  "name":"page"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Culture",
+      "children": [
+        {
+          "name": "Music",
+          "children": [
+            {
+              "name": "Hiphop"
+            },
+            {
+              "name": "Jazz"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

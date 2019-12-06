@@ -2,3 +2,7 @@ This part1 branch is the code for the blog post of the recursive tree part1 of t
 
 Part1 blog could be found here
 http://leonstel.github.io/recursive_tree_part1
+
+This is the result for part1. Visually not a piece of art but the core is about
+using recursion. This tree will be used in next parts as starting point.
+<img src="./assets/tree_simple_part1.gif" width="150" />

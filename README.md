@@ -11,5 +11,6 @@ using recursion. This tree will be used in next parts as starting point.
 ```
 npm install
 npm run dev
-go to localhost:8080
 ```
+
+After running above commands go to localhost:8080

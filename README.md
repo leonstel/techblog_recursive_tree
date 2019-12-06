@@ -5,4 +5,4 @@ http://leonstel.github.io/recursive_tree_part1
 
 This is the result for part1. Visually not a piece of art but the core is about
 using recursion. This tree will be used in next parts as starting point.
-<img src="./assets/tree_simple_part1.gif" width="150" />
+<img src="./img/tree_simple_part1.gif" width="150" />

@@ -1,12 +1,13 @@
-This part1 branch is the code for the blog post of the recursive tree part1 of the series
+This part2 branch is the code for the blog post of the recursive tree part2 of the series
 
-Part1 blog could be found here
-http://leonstel.github.io/recursive_tree_part1
+Part2 blog could be found here
+http://leonstel.github.io/recursive_tree_part2
 
-This is the result for part1. Visually not a piece of art but the core is about
-using recursion. This tree will be used in next parts as starting point.
+This is the result for part 2. This tree will be used in next parts as starting point for part 3.
 
-<img src="./img/tree_simple_part1.gif" width="150" />
+| Before  | After |
+| ------------- | ------------- | ------------- | ------------- |
+| <img src="./assets/tree_simple_part1.gif" width="150" /> | <img src="./assets/treeviewcase3.gif" width="150" />|
 
 ```
 npm install

@@ -1,6 +1,13 @@
 import {LitElement, html, css} from 'lit-element';
 import {mainStyle} from "../style";
 
+const STATUS = {
+    NONE: 1,
+    CHECKED: 2,
+    INDETERMINATE: 3,
+};
+
+
 export class Leaf extends LitElement{
 
     static get styles() {
@@ -139,6 +146,8 @@ export class Leaf extends LitElement{
         return {
             leaf: { type: Object },
             childrenRef: { type: Array },
+            hide: {type:Boolean},
+            status: {type: Number},
         };
     }
 
@@ -162,15 +171,29 @@ export class Leaf extends LitElement{
         return html`
             ${this.leaf ? html`
                 ${
-                    this.leaf.name ? html`
-                        <div class="node">                            
-                            <div class="item">
+                    this.parentRef && this.leaf.name ? html`
+                        <div class="node">
+                            ${  
+                                this.hasChildren() ? html`
+                                    <div class="arrow">
+                                        <img class="${!this.hide ? 'down' : ''}" @click="${this.fold}" src="./src/assets/arrow.svg" />
+                                    </div>       
+                                ` : html``
+                            }
+                                                    
+                            <div class="item" @click="${this.clicked}">
+                                <div class="checkbox">
+                                    <input type="checkbox" class="${this.status === STATUS.INDETERMINATE ? 'indeterminate':''}" .checked=${this.status === STATUS.CHECKED} .indeterminate=${this.status === STATUS.INDETERMINATE}>
+                                    <span class="custom-checkbox"></span>
+                                    <span class="mark checkmark"></span>
+                                    <span class="mark indeterminate-mark"></span>
+                                </div>
                                 <p>${this.leaf.name}</p>
                             </div>
                         </div>
                     `: ''
                 }
-                <div>
+                <div class="${this.hide ? 'hide': ''}">
                     ${this.hasChildren() ? this.renderChildren() : ''}
                 </div>
             `: ''}
@@ -198,6 +221,23 @@ export class Leaf extends LitElement{
 
     hasChildren(){
         return !!this.childrenRef.length;
+    }
+
+    fold(){
+        this.hide = !this.hide;
+    }
+
+    clicked(){
+        if(this.status === STATUS.CHECKED){
+            this.status = STATUS.NONE;
+        }else if(this.status === STATUS.NONE || STATUS.INDETERMINATE){
+            console.log('clicked');
+            this.status = STATUS.CHECKED;
+            // this.openBranch();
+        }
+
+        // this.determineStateDown();
+        // this.determineStateUp(this.status);
     }
 }
 

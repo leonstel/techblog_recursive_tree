@@ -96,10 +96,7 @@ export class Leaf extends LitElement{
                     -webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
                     transform: rotate(45deg);
-                }
-                /* test*/
-                
-                
+                }              
                 
                 .checkbox .indeterminate ~ .indeterminate-mark:after {
                     display: block;

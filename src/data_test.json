@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "Leaf1",
+      "children": [
+        {
+          "name":"Leaf2",
+          "children": [
+            {
+              "name":"Leaf3",
+              "children": [
+                {
+                  "name":"Leaf4",
+                  "children": [
+                    {
+                      "name":"Leaf5",
+                      "children": [
+                        {
+                          "name":"Leaf6"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

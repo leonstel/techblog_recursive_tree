@@ -231,13 +231,55 @@ export class Leaf extends LitElement{
         if(this.status === STATUS.CHECKED){
             this.status = STATUS.NONE;
         }else if(this.status === STATUS.NONE || STATUS.INDETERMINATE){
-            console.log('clicked');
             this.status = STATUS.CHECKED;
-            // this.openBranch();
+            this.openBranch();
         }
 
-        // this.determineStateDown();
-        // this.determineStateUp(this.status);
+        this.determineStateDown();
+        this.determineStateUp(this.status);
+    }
+
+    openBranch(){
+        this.hide = false;
+        this.callChildren(this.openBranch);
+    }
+
+
+    callChildren(method){
+        for (let childRef of this.childrenRef){
+            childRef[method.name]();
+        }
+    }
+
+    determineStateDown(){
+        switch (this.status) {
+            case STATUS.NONE:
+                this.callChildren(this.setNone);
+                break;
+            case STATUS.CHECKED:
+                this.callChildren(this.setChecked);
+                break;
+        }
+    }
+
+    determineStateUp(newState){
+        if(this.parentRef) {
+            if(newState === STATUS.NONE)
+                this.parentRef.status = STATUS.NONE;
+
+            // this.parentRef.touch();
+            this.parentRef.determineStateUp(newState)
+        }
+    }
+
+    setChecked(){
+        this.status =STATUS.CHECKED;
+        this.callChildren(this.setChecked);
+    }
+
+    setNone(){
+        this.status =STATUS.NONE;
+        this.callChildren(this.setNone);
     }
 }
 

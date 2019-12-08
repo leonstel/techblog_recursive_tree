@@ -6,7 +6,7 @@ http://leonstel.github.io/recursive_tree_part2
 This is the result for part 2. This tree will be used in next parts as starting point for part 3.
 
 | Before  | After |
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- |
 | <img src="./assets/tree_simple_part1.gif" width="150" /> | <img src="./assets/treeviewcase3.gif" width="150" />|
 
 ```

@@ -6,10 +6,10 @@ http://leonstel.github.io/recursive_tree_part3
 This is the result for part 3. 
 
 ### Tree
-<img src="./assets/treeviewcase3.gif" width="150" />
+<img src="./img/treeviewcase3.gif" width="150" />
 
 ### Searching
-<img src="./assets/treesearch.gif" width="150" />
+<img src="./img/treesearch.gif" width="150" />
 
 ```
 npm install

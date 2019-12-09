@@ -169,7 +169,7 @@ export class Leaf extends LitElement{
 
     render() {
         return html`
-            ${this.leaf ? html`
+            ${this.leaf && this.leaf.included ? html`
                 ${
                     this.parentRef && this.leaf.name ? html`
                         <div class="node">
@@ -225,6 +225,37 @@ export class Leaf extends LitElement{
 
     fold(){
         this.hide = !this.hide;
+        this.touch();
+        this.callChildren(this.touch);
+    }
+
+    touch(){
+        if(this.status !== STATUS.CHECKED){
+            const hasCheckedChildren = this.hasCheckedInBranch();
+            if(this.hide){
+                if(hasCheckedChildren){
+                    this.status = STATUS.INDETERMINATE
+                }else{
+                    this.status = STATUS.NONE;
+                }
+            }else{
+                if(hasCheckedChildren){
+                    this.status = STATUS.NONE;
+                }
+            }
+        }
+    }
+
+    hasCheckedInBranch() {
+        for (let childRef of this.childrenRef){
+            const flag = childRef.isChecked() || childRef.hasCheckedInBranch();
+            if(flag) return true;
+        }
+        return false;
+    }
+
+    isChecked(){
+        return this.status === STATUS.CHECKED;
     }
 
     clicked(){
@@ -244,6 +275,10 @@ export class Leaf extends LitElement{
         this.callChildren(this.openBranch);
     }
 
+    closeBranch(){
+        this.hide = true;
+        this.callChildren(this.closeBranch);
+    }
 
     callChildren(method){
         for (let childRef of this.childrenRef){
@@ -270,6 +305,10 @@ export class Leaf extends LitElement{
             // this.parentRef.touch();
             this.parentRef.determineStateUp(newState)
         }
+    }
+
+    getChildrenRef(){
+        return this.childrenRef;
     }
 
     setChecked(){

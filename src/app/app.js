@@ -48,10 +48,35 @@ class MyApp extends LitElement {
         this.data = prepData(apiData);
     }
 
+    firstUpdated() {
+        this.treeEl = this.shadowRoot.querySelector('custom-tree');
+    }
+
     render() {
         return html`
-            <custom-tree .data="${this.data}"></custom-tree>
+            <div>
+                <div>
+                    <input type="text" @keyup="${this.inputChanged}" placeholder="...">
+                    <button @click="${this.closeTree}">Close tree</button>
+                    <button @click="${this.openTree}">Open tree</button>
+                </div>
+                <div>
+                    <custom-tree .data="${this.data}"></custom-tree>
+                </div>
+            </div>
         `;
+    }
+
+    closeTree(){
+        this.treeEl.closeTree();
+    }
+
+    openTree(){
+        this.treeEl.openTree();
+    }
+
+    inputChanged(e){
+        this.treeEl.search(e.target.value);
     }
 }
 

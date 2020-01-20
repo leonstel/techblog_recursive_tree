@@ -10,6 +10,7 @@ From my experience I believe that most developers evade the recursion topic, but
 be a helpful tool for many cases not just for trees. 
 
 <img src="./assets/treeviewcase3.gif" width="150" />
+<img src="./assets/treesearch.gif" width="150" />
 
 ## Blog
 

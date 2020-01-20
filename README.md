@@ -5,7 +5,7 @@
 How to code a searchable code tree? After hours, maybe weeks, of meditation I came to the conclusion that my next goal has been 
 in front of my very eyes... RECURSION. Recursion is the key 
 for creating managable tree structures. 
-For sure you could harcode every branch and leaf but that gets unmaintainable very quickly.
+For sure you could harcode every branch and leaf but x gets unmaintainable very quickly.
 From my experience I believe that most developers evade the recursion topic, but it could
 be a helpful tool for many cases not just for trees. 
 
@@ -25,10 +25,9 @@ The blog series goes into depth on how to implement
 It has been fun making it and I hope will learn at least one thing or two
 that would help you further on your own journey.
 
-[Finding X MEN (Part1)](http://leonstel.github.io/blogs/xmen_part1)  
-[Finding  X MEN - Without Italian Delicacy (Part2)](http://leonstel.github.io/blogs/xmen_part2)  
-[Finding  X MEN - The Right Direction (Part3)](http://leonstel.github.io/blogs/xmen_part3)  
-[Finding  X MEN - The Gathering (Part4)](http://leonstel.github.io/blogs/xmen_part4)
+[Recursion Tree Has No Incentive to Leaf (Part1)](http://leonstel.github.io/blogs/recursive_tree_part1)  
+[Recursion Tree Hide and Seek (Part2)](http://leonstel.github.io/blogs/recursive_tree_part2)  
+[Recursion Tree Fairy Tail (Part3)](http://leonstel.github.io/blogs/recursive_tree_part3)
 
 [Other Blog Posts](http://leonstel.github.io/)
 

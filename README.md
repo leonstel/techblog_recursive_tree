@@ -18,7 +18,7 @@ The blog series goes into depth on how to implement
 
 - Recursion principles
 - Tree structure
-- Js
+- JsS
 - Composition
 - Recursive search/filter algorithm
 
@@ -30,6 +30,14 @@ that would help you further on your own journey.
 [Recursion Tree Fairy Tail (Part3)](http://leonstel.github.io/blogs/recursive_tree_part3)
 
 [Other Blog Posts](http://leonstel.github.io/)
+
+
+Code for part1
+[Git Repo recursive part1 branch](https://github.com/leonstel/techblog_recursive_tree/tree/part1)  
+Code for part2
+[Git Repo recursive part2 branch](https://github.com/leonstel/techblog_recursive_tree/tree/part2)  
+Code for part3
+[Git Repo recursive part3 branch](https://github.com/leonstel/techblog_recursive_tree/tree/part3)
 
 ```
 npm install

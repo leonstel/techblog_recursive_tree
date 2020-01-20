@@ -1,5 +1,5 @@
-# Recursion Tree Blog Seroies
-<img src="./assets/xmen.jpg" />
+# Recursion Tree Blog Series
+<img src="./assets/nature_tree.jpg" />
 
 ## The App
 How to code a searchable code tree? After hours, maybe weeks, of meditation I came to the conclusion that my next goal has been 

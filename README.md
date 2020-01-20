@@ -18,7 +18,7 @@ The blog series goes into depth on how to implement
 
 - Recursion principles
 - Tree structure
-- JsS
+- Js
 - Composition
 - Recursive search/filter algorithm
 
